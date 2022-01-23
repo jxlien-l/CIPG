@@ -1,0 +1,28 @@
+GÉRER LE MODE DÉMONSTRATION :
+    app/Config/Constants.php, DEMONSTRATION [true/false]
+
+
+    19/10/2020
+    Gère les failles XSS (Cross Site Scripting) avec la fonction php htmlspecialchars()
+    Optimisation : 
+        Je déclarais avant mes modèles de la sorte :
+        $model = new Model();
+        $data = $model->get();
+
+        Mais je n'ai parfois pas besoin de réutiliser mon objet, donc je déclare directement :
+        $data = (new Model())->get();
+    Ajout de Markdown
+
+20/10/2020
+    Ajout de Markdown terminée
+    Update des options
+
+
+Views/partial_views/panel
+    video.php
+        <?php if(isset($video)): ?>
+        value="<?= 'https://www.youtube.com/watch?v='.$video['Value']; ?>" 
+        <?php endif; ?>
+        <?php if(!isset($video)): ?>
+        placeholder="<?= 'Il n\'y a pas de vidéo pour le moment.'; ?>" 
+        <?php endif; ?>>
