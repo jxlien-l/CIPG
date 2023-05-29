@@ -4,7 +4,7 @@ GÉRER LE MODE DÉMONSTRATION :
 
     19/10/2020
     Gère les failles XSS (Cross Site Scripting) avec la fonction php htmlspecialchars()
-    Optimisation : 
+    Optimisation :
         Je déclarais avant mes modèles de la sorte :
         $model = new Model();
         $data = $model->get();
@@ -21,8 +21,8 @@ GÉRER LE MODE DÉMONSTRATION :
 Views/partial_views/panel
     video.php
         <?php if(isset($video)): ?>
-        value="<?= 'https://www.youtube.com/watch?v='.$video['Value']; ?>" 
+        value="<?= 'https://www.youtube.com/watch?v='.$video['Value']; ?>"
         <?php endif; ?>
         <?php if(!isset($video)): ?>
-        placeholder="<?= 'Il n\'y a pas de vidéo pour le moment.'; ?>" 
+        placeholder="<?= 'Il n\'y a pas de vidéo pour le moment.'; ?>"
         <?php endif; ?>>
