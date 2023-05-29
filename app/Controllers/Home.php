@@ -29,7 +29,6 @@ class Home extends BaseController
 
 		$data['environment'] = $this->environment();
 		$data['options'] = $this->get_options();
-		//$data['session'] = \Config\Services::session();
 
 		$model = new GalleryModel($db);
 		$data_gallery = $model->get_gallery($id);

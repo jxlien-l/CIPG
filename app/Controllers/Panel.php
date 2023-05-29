@@ -21,7 +21,6 @@ class Panel extends Controller
     $this->db = db_connect();
     $this->request = \Config\Services::request();
     $this->session = \Config\Services::session();
-    $sess = \Config\Services::session();
     $this->user = $this->session->get('user');
     $data['views'] = [self::PATH.'default'];
     if(!$this->is_permitted($this->user))
@@ -37,7 +36,6 @@ class Panel extends Controller
     $data['title'] = 'Accueil';
     $data['views'] = [[self::PATH.'default']];
     $data['data'] = $this->get_dashboard();
-    //$this->db->table('users')->where('Id', $this->user['Id'])->update(['Password' => password_hash(($this->db->table('users')->select('Password')->where('Id', $this->user['Id'])->get()->getResultArray())[0]['Password'], PASSWORD_DEFAULT)]);
     $this->load_view($data);
   }
 
@@ -292,11 +290,6 @@ class Panel extends Controller
         $data['views'] = [[self::PATH.'galleries']];
 
       }
-      //if($album !== null)
-      //{
-      //	$this->GalleryAlbum($album);
-      //	exit;
-      //}
     }
     $this->load_view($data);
   }
