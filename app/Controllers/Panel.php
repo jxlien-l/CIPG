@@ -1,6 +1,5 @@
 <?php namespace App\Controllers;
 
-use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Controller;
 use App\Models\OptionsModel;
 use App\Models\GalleryModel;
@@ -631,7 +630,7 @@ class Panel extends Controller
       case 'value':
         # code...
         break;
-      
+
       default:
         throw new Exception('')
         break;

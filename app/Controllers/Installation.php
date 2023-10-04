@@ -1,18 +1,11 @@
 <?php namespace App\Controllers;
 
-use App\Models\ContactModel;
-use App\Models\OptionsModel;
-use App\Models\CreationModel;
-use App\Models\UserModel;
-use App\Models\GalleryModel;
-use App\Models\GalleryCreationsModel;
-
 class Installation extends BaseController
 {
     protected $db;
     protected $user;
     protected $session;
-    
+
     public function index()
     {
         return view('installation');
@@ -28,7 +21,7 @@ class Installation extends BaseController
 
     private function is_installed()
     {
-        
+
     }
 
     public function Secure()
